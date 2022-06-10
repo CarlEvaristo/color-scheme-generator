@@ -17,8 +17,8 @@
 
         <nav>
             <div class="container">
-                <div id="color-picker-box"><input type="color" id="color-picker" value="#FD811C"></div>
-                <select id="color-mode" name="colors">
+                <div id="color-picker-box"><input type="color" id="color-picker" value="#FD811C" onchange="buttonHandler()"></div>
+                <select id="color-mode" name="colors" onchange="buttonHandler()">
                     <option value="monochrome" selected>monochrome</option>
                     <option value="monochrome-dark">monochrome-dark</option>
                     <option value="monochrome-light">monochrome-light</option>

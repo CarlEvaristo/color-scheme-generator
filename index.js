@@ -16,7 +16,7 @@ function copyClipboard(value) {
 
 let isFirstVisit = true
 
-submitBtn.addEventListener("click", function() {
+function buttonHandler() {
     let hex = colorPicker.value.substring(1)
     columnWrapper.classList.remove("color-field")
     columnWrapper.innerHTML = ""
@@ -40,6 +40,8 @@ submitBtn.addEventListener("click", function() {
         overlay.style.display = "inline"
         isFirstVisit = false
     }
-})
+}
+
+submitBtn.addEventListener("click", buttonHandler)
 
 
