@@ -16,6 +16,7 @@ function showModal(value) {
     modal.innerHTML = `
     <h3>Copied color value<br>${value}</h3>
     `
+    setTimeout(()=>{overlay.style.display = "none"},1000)
 }
 
 let isFirstVisit = true
@@ -41,16 +42,10 @@ function buttonHandler() {
                 `
             })
         })
-    if (isFirstVisit & screen.width>1000) {
+    if (isFirstVisit) {
         overlay.style.display = "inline"
         isFirstVisit = false
-    } else if (isFirstVisit & screen.width<1000) {
-        modal.innerHTML = `
-            <h3>Please pick a color<br>And chose a scheme</h3>
-        `
-        overlay.style.display = "inline"
-        isFirstVisit = false
-    }
+    } 
 }
 
 submitBtn.addEventListener("click", buttonHandler)
