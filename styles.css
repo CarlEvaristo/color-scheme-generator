@@ -96,7 +96,7 @@ select {
     bottom:0px;
     left:0px;
     right:0px;
-    background: rgba(0, 0, 0, 0.488);
+    background: #00000000;
     z-index:1000;
 }
 
@@ -106,7 +106,7 @@ select {
         padding:1.05em 2em;
     }
     #overlay {
-        background: #00000000;
+        background: rgba(0, 0, 0, 0.488);
     }
     #modal {
         max-width: 18vw;
