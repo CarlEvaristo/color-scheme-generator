@@ -81,7 +81,7 @@ select {
     font-size: 1.2rem;
     line-height: 1.6;
     text-align: center;
-    padding:50px;
+    padding:10px;
     max-width: 80vw;
     height: auto;
     margin: 30vh auto;
@@ -96,7 +96,7 @@ select {
     bottom:0px;
     left:0px;
     right:0px;
-    background: rgba(192,192,192,0.2);
+    background: rgba(0, 0, 0, 0.488);
     z-index:1000;
 }
 
@@ -106,7 +106,7 @@ select {
         padding:1.05em 2em;
     }
     #modal {
-        max-width: 50vw;
+        max-width: 18vw;
     }
     .container {
         width: 60vw;

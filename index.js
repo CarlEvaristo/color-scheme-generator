@@ -10,8 +10,12 @@ setTimeout(()=>{submitBtn.click()},1000)
 const columnWrapper = document.getElementById("columns")
 columnWrapper.classList.add("color-field")
 
-function copyClipboard(value) {
-    navigator.clipboard.writeText(value);
+function showModal(value) {
+    navigator.clipboard.writeText(value)
+    overlay.style.display = "inline"
+    document.getElementById("modal").innerHTML = `
+    <h3>Copied color value<br>${value}</h3>
+    `
 }
 
 let isFirstVisit = true
@@ -29,14 +33,14 @@ function buttonHandler() {
                             title="click me to copy color ${color.hex.value}" 
                             class="color-field" 
                             style="background:${color.hex.value}" 
-                            onclick="navigator.clipboard.writeText('${color.hex.value}')"
+                            onclick="showModal('${color.hex.value}')"   
                             >
                                 <p class="color-code">${color.hex.value}</p>
                         </div>
                 `
             })
         })
-    if (isFirstVisit) {
+    if (isFirstVisit & screen.width>1000) {
         overlay.style.display = "inline"
         isFirstVisit = false
     }
