@@ -105,6 +105,9 @@ select {
         font-size: 1rem;
         padding:1.05em 2em;
     }
+    #overlay {
+        background: #00000000;
+    }
     #modal {
         max-width: 18vw;
     }
