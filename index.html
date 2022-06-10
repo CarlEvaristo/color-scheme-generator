@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="styles.css" rel="stylesheet">
+        <title>Color Scheme Generator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="overlay">
+            <div id="modal">
+                <h3>Click on a color to copy the color value to the clipboard</h3>
+            </div>
+        </div>
+
+        <nav>
+            <div class="container">
+                <div id="color-picker-box"><input type="color" id="color-picker"></div>
+                <select id="color-mode" name="colors">
+                    <option value="monochrome" selected>monochrome</option>
+                    <option value="monochrome-dark">monochrome-dark</option>
+                    <option value="monochrome-light">monochrome-light</option>
+                    <option value="analogic">analogic</option>
+                    <option value="complement">complement</option>
+                    <option value="analogic-complement">analogic-complement</option>
+                    <option value="triad">triad</option>
+                    <option value="quad">quad</option>
+                </select>
+                <button type="submit" id="submit-btn">Get colors</button>
+            </div>
+        </nav>
+        <main id="columns"></main>
+
+        <script src="index.js"></script>
+    </body>
+</html>
