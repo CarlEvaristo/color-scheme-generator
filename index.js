@@ -21,9 +21,10 @@ function showModal(value) {
 let isFirstVisit = true
 
 function buttonHandler() {
+    columnWrapper.innerHTML = ""
     let hex = colorPicker.value.substring(1)
     columnWrapper.classList.remove("color-field")
-    columnWrapper.innerHTML = ""
+    
     fetch(`https://www.thecolorapi.com/scheme?hex=${hex}&mode=${colorMode.value}&count=5`)
         .then(res => res.json())
         .then(data => {
