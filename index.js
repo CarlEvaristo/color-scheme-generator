@@ -2,7 +2,7 @@ const colorPicker = document.getElementById("color-picker")
 const colorMode = document.getElementById("color-mode")
 const submitBtn = document.getElementById("submit-btn")
 const overlay = document.getElementById("overlay")
-
+const modal = document.getElementById("modal")
 overlay.addEventListener("click", () => overlay.style.display = "none")
 
 setTimeout(()=>{submitBtn.click()},1000)
@@ -13,7 +13,7 @@ columnWrapper.classList.add("color-field")
 function showModal(value) {
     navigator.clipboard.writeText(value)
     overlay.style.display = "inline"
-    document.getElementById("modal").innerHTML = `
+    modal.innerHTML = `
     <h3>Copied color value<br>${value}</h3>
     `
 }
@@ -42,6 +42,12 @@ function buttonHandler() {
             })
         })
     if (isFirstVisit & screen.width>1000) {
+        overlay.style.display = "inline"
+        isFirstVisit = false
+    } else if (isFirstVisit & screen.width<1000) {
+        modal.innerHTML = `
+            <h3>Please pick a color<br>And chose a scheme</h3>
+        `
         overlay.style.display = "inline"
         isFirstVisit = false
     }
