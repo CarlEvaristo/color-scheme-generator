@@ -35,15 +35,15 @@ input[type="color"] {
     border:none;
     background: none;
     width:70px;
-	height: 60px;
+	height: 65px;
 }
 select { 
     max-width:40vw;
     border: rgb(204, 204, 204) solid 2px;
     border-radius: 4px;
-    padding:1.05em 2em;
+    padding:1.4em 2em;
     display: inline-block;
-    font-size: 1rem
+    font-size: 0.8rem
 }
 #submit-btn{
     font-size: 1em;
@@ -101,6 +101,10 @@ select {
 }
 
 @media (min-width: 900px) {
+    select { 
+        font-size: 1rem;
+        padding:1.05em 2em;
+    }
     #modal {
         max-width: 50vw;
     }

@@ -5,6 +5,8 @@ const overlay = document.getElementById("overlay")
 
 overlay.addEventListener("click", () => overlay.style.display = "none")
 
+setTimeout(()=>{submitBtn.click()},1000)
+
 const columnWrapper = document.getElementById("columns")
 columnWrapper.classList.add("color-field")
 
